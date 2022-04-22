@@ -8,7 +8,6 @@ O input terá dois números inteiros N e M (1 ≤ N ≤ 105, M ≤ 104), as dime
 
 Output
 Imprima o número de casas pretas.
-
 */
 
 #include <iostream>
