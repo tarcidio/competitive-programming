@@ -1,5 +1,8 @@
 /*
-Creber e seu amigo Ediosvaldo caminhavam alegremente pela praia, nesse dia ensolarado. Ao caminharem na areia, notaram que haviam três números desenhados nela. Todos os dias a dupla de amigos ia na praia no mesmo horário e sempre avistavam três números desenhados no mesmo local. Eles começaram a se perguntar se havia alguma mensagem secreta por trás desses números misteriosos. Creber convenceu seu amigo de que apenas quando eles ordenassem os valores é que descobririam a verdade. Como Ediosvaldo e Creber não são muito bons com ordenação, eles decidiram pedir a você que resolva esse problema!
+Creber e seu amigo Ediosvaldo caminhavam alegremente pela praia, nesse dia ensolarado. Ao caminharem na areia, notaram que haviam três números desenhados nela. 
+Todos os dias a dupla de amigos ia na praia no mesmo horário e sempre avistavam três números desenhados no mesmo local. Eles começaram a se perguntar se havia 
+alguma mensagem secreta por trás desses números misteriosos. Creber convenceu seu amigo de que apenas quando eles ordenassem os valores é que descobririam a verdade. 
+Como Ediosvaldo e Creber não são muito bons com ordenação, eles decidiram pedir a você que resolva esse problema!
 
 Dado três valores na entrada, imprima na saída os três valores ordenados de maneira decrescente (Para melhor entendimento do problema, olhem os casos de teste)
 
