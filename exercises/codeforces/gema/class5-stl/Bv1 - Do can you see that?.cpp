@@ -1,4 +1,5 @@
 //NAME: B - Do you can see that?
+//VERSION: O(N^3)
 #include <bits/stdc++.h>
 
 using namespace std;

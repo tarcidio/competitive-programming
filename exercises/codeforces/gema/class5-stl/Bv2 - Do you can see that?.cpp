@@ -1,38 +1,51 @@
 //NAME: B - Do you can see that?
+//VERSION: O(N^3)
 #include <bits/stdc++.h>
 
 using namespace std;
 
-int main(){
+const int MAXN = 1e3 + 5; //double(10^3)
+char input[MAXN][MAXN];//input
+bool enemy[MAXN][MAXN];//true = vision of enemy
+int n, m;//height and width
 
-    int n, m;//height and width
+void fill_line(int i, int j, int dx){
+    while(j >= 0 && j < m && input[i][j] != '#'){
+        enemy[i][j] = true;
+        j += dx;
+    }
+}
+
+void fill_column(int i, int j, int dy){
+    while(i >= 0 && i < n && input[i][j] != '#'){
+        enemy[i][j] = true;
+        i += dy;
+    }
+}
+
+int main(){  
     cin >> n >> m;
 
-    char map[1001][1001];
     for (int i = 0; i < n; i++)
         for(int j = 0; j < m; j ++)
-            cin >> map[i][j];
+            cin >> input[i][j];
     
     for (int i = 0; i < n; i++)
         for(int j = 0; j < m; j ++){
-            if(map[i][j] == 'R')//right
-                for(int k = j; k < m && map[i][k] != '#'; k++)
-                    map[i][k] = 'N';
-            else if(map[i][j] == 'L')//left
-                for(int k = j; k >= 0 && map[i][k] != '#'; k--)
-                    map[i][k] = 'N';
-            else if(map[i][j] == 'U')//up
-                for(int k = i; k >= 0 && map[k][j] != '#'; k--)
-                    map[k][j] = 'N';
-            else if(map[i][j] == 'D')//down
-                for(int k = i; k < n && map[k][j] != '#'; k++)
-                    map[k][j] = 'N';
+            if(input[i][j] == 'R')//right
+                fill_line(i, j, 1);
+            else if(input[i][j] == 'L')//left
+                fill_line(i, j, -1);
+            else if(input[i][j] == 'U')//up
+                fill_column(i, j, -1);
+            else if(input[i][j] == 'D')//down
+                fill_column(i, j, 1);
         }
     
     int nsol = 0;//number of solutions
     for (int i = 0; i < n; i++)
         for(int j = 0; j < m; j ++)
-            if(map[i][j] == '.')
+            if(input[i][j] == '.' && !enemy[i][j])
                 nsol++;
 
     if(nsol == 0)
