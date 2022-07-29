@@ -1,5 +1,6 @@
 //NAME: Complete Expressions
 //O(N)
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -24,16 +25,15 @@ int main(){
     cin >> n >> input;
 
     for(char it : input){
-        if(it == ')')
+        if(it == ')'){
             if(!test('(' ,')')) break;
-        else if(it == ']')
+        }else if(it == ']'){
             if(!test('[', ']')) break;
-        else if(it == '}')
+        }else if(it == '}'){
             if(!test('{', '}')) break;
-        else
+        }else{
             st.push(it);
-        cout << it << " + " << sol << " + ";
-        if(st.empty()) cout << "oi";
+        }
     }
 
     st.empty() && sol ? cout << "COMPLETINHA" : cout << "DEU RUIM";
@@ -41,7 +41,7 @@ int main(){
     return 0;
 }
 
-/*int main(){
+/*int main(){works, but it's wrong
     int n;
     string input;
     cin >> n >> input;
