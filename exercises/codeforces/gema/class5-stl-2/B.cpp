@@ -1,9 +1,34 @@
 //NAME: Registration System
-//
+//O(logn)
 
 #include <bits/stdc++.h>
 
 using namespace std;
+
+map<string, int> names;//p.first: the name; p.second: how many the name were sent
+
+int main(){
+    int n;
+    string input_name;
+
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        cin >> input_name;
+        if(names.count(input_name)){
+            names[input_name]++;
+            string temp = input_name + to_string(names[input_name]);
+            cout << temp << endl;
+        } else {
+            names[input_name] = 0;
+            cout << "OK" << endl;
+        }
+    }
+
+    return 0;
+}
+
+/*
+This code isn't eficient
 
 set<string> names;
 
@@ -36,4 +61,4 @@ int main (){
     }
 
     return 0;
-}
+}*/
