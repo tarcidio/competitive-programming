@@ -16,11 +16,12 @@ int main(){
         adjacency_list[source_nodes].push_back(dest_nodes);
     }
 
+    //Print the graph
     for(int i = 0; i < num_nodes; i++){
-        cout << "Nó " << i << ": ";
+        cout << "Nó " << i << " |";
         for(auto it = adjacency_list[i].begin(); it != adjacency_list[i].end(); it++)
-            cout << *it << " ";
-        cout << endl;
+            cout << " --> "<< *it;
+        cout << " --> NULL" << endl;
     }
 
     return 0;

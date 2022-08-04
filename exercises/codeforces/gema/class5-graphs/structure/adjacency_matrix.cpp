@@ -20,7 +20,7 @@ int main(){
     
     for(int i = 0; i < num_nodes; i++){
         for(int j = 0; j < num_nodes; j++){
-            cout << "Nó " << i << " -> " << j << ":" << adjacency_matrix[i][j] << endl;
+            cout << "Nó " << i << " --> " << j << ":" << adjacency_matrix[i][j] << endl;
         }
     }
 
