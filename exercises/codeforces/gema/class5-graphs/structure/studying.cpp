@@ -2,30 +2,26 @@
 
 using namespace std;
 
-const int MAX_NODES = 1e3 + 2;
+const int MAX_NODES = 1e3;
 vector<int> edges[MAX_NODES];
-int dist[MAX_NODES];//dist between x that dist[x] = 0 and others nodes
-int ant[MAX_NODES];//antecessor of the node index in the path
+int dist[MAX_NODES];
+int ant[MAX_NODES];
 
 void bfs(int source){
-    //set the dist
     memset(dist, -1, sizeof(dist));
     dist[source] = 0;
-    //set the queue
+    memset(ant, -1, sizeof(ant));
     queue<int> will;
     will.push(source);
-    //set ant
-    memset(ant, -1 , sizeof(ant));
 
-    //Algorithm
     while(!will.empty()){
         int node = will.front();
         will.pop();
-        for(int neigh: edges[node]){
+        for(int neigh : edges[node]){
             if(dist[neigh] == -1){
+                will.push(neigh);
                 dist[neigh] = dist[node] + 1;
                 ant[neigh] = node;
-                will.push(neigh);
             }
         }
     }
@@ -42,7 +38,7 @@ void calculate_path(int source, int dest){
     reverse(path.begin(), path.end());
 }
 
-int main(){
+int main (){
     int num_nodes, num_edges;
     cin >> num_nodes >> num_edges;
 
@@ -60,23 +56,22 @@ int main(){
         cout << " --> NULL" << endl;
     }
 
+    //Prinf dist array
+    cout << "The array dist bfs(1) is: ";
     bfs(1);
-
-    //Print the dist array
-    cout << "The vector dist with source 1 is: ";
     for(int i = 0; i < num_nodes; i++){
         cout << dist[i] << " ";
     }
     cout << endl;
 
-    //Prinf the ant array
+    //Prinf ant array
     cout << "The array ant bfs(1) is: ";
     for(int i = 0; i < num_nodes; i++){
         cout << ant[i] << " ";
     }
     cout << endl;
 
-    //Prinf the path vector
+    //Prinf path vector
     cout << "The vector path calculate_pathe(1,3) is: ";
     calculate_path(1,3);
     for(int i : path){
@@ -84,7 +79,7 @@ int main(){
     }
     cout << endl;
 
-    //Prinf the path vector
+    //Prinf path vector
     cout << "The vector path calculate_pathe(1,0) is: ";
     calculate_path(1,0);
     for(int i : path){

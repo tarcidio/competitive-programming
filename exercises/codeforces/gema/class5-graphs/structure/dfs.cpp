@@ -23,16 +23,45 @@ int main(){
         int from, to;
         cin >> from >> to;
         edges[from].push_back(to);
-        edges[to].push_back(from);
     }
 
-    int acompcomplex = 0;
+    //Print the graph
+    for(int i = 0; i < num_nodes; i++){
+        cout << "Nó " << i << " |";
+        for(int it : edges[i])
+            cout << " --> "<< it;
+        cout << " --> NULL" << endl;
+    }
+
+    //Print the visit array
+    dfs(1);
+    cout << "The vector visit with dfs(1) is: ";
+    for(int i = 0; i < num_nodes; i++){
+        cout << visit[i] << " ";
+    }
+    cout << endl;
+
+    //Print the number of connected component
+    int num_coneccted_component = 0;
+    memset(visit, 0, sizeof(visit));
     for(int i = 0; i < num_nodes; i++){
         if(!visit[i]){
-            acompcomplex++;
+            num_coneccted_component++;
             dfs(i);//O(N + M)
         }
     }
+    cout << "The number of connected component of this graphs is " << num_coneccted_component << endl;
 
     return 0;
 }
+
+//example:
+/*
+5 6
+0 1
+0 3
+1 4
+2 1
+3 4
+4 3
+*/
