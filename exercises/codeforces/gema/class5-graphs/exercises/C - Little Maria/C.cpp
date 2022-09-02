@@ -5,10 +5,12 @@
 
 using namespace std;
 
+//Create graph
 const int MAX_NODES = 1e3 + 3;
 set<int> edges[MAX_NODES];
 int visit[MAX_NODES];
 
+//Delph first search
 void dfs(int cur){
     visit[cur] = 1;
     for(int neigh:edges[cur])
@@ -19,6 +21,7 @@ int main (){
     int num_nodes, num_edges, node_i, node_maria;
     cin >> num_nodes >> num_edges >> node_i >> node_maria;
 
+    //Reading and store the edges
     queue<pair<int,int>> tests;
     for(int i = 0; i < num_edges; i++){
         int from, to;
@@ -29,6 +32,7 @@ int main (){
         tests.push({from,to});
     }
 
+    //Flagt to control the exist of path
     bool exist = true;
 
     for(int i = 0; i < num_edges; i++){
@@ -47,6 +51,7 @@ int main (){
         edges[to].insert(from);
     }
 
+    //If not exist edges
     if(!num_edges)
         exist = false;
 

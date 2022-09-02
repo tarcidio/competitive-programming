@@ -5,11 +5,13 @@
 
 using namespace std;
 
+//Create graphs
 const int MAX_NODES = 1e3 + 1;
 int path [MAX_NODES][MAX_NODES];
 vector<int> edges[MAX_NODES];
 int dist[MAX_NODES];
 
+//Breadth first search
 void bfs(int source){
     memset(dist, -1, sizeof(dist));
     dist[source] = 0;
@@ -32,6 +34,7 @@ int main (){
     int num_nodes;
     cin >> num_nodes;
 
+    //Reading
     for(int i = 0; i < num_nodes; i++)
         for(int j = 0; j < num_nodes; j++){
             cin >> path[i][j];
@@ -41,6 +44,7 @@ int main (){
             }
         }
     
+    //Flat to control if exist a path
     bool exist = true;
     for(int node = 0; node < num_nodes; node++){
         bfs(node);

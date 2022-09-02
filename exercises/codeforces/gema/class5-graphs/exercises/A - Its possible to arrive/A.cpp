@@ -5,10 +5,12 @@
 
 using namespace std;
 
+//Create graph
 const int MAX_NODES = 1e5 + 3;
 vector<int> edges [MAX_NODES];
 int visit[MAX_NODES];
 
+//Delph first search
 void dfs(int cur){
     visit[cur] = 1;
     for(int neigh : edges[cur]){
@@ -20,6 +22,7 @@ int main (){
     int num_nodes, num_edges, nodeA, nodeB;
     cin >> num_nodes >> num_edges >> nodeA >> nodeB;
     
+    //Reading
     for(int i = 0; i < num_edges; i ++){
         int from, to;
         cin >> from >> to;
