@@ -1,7 +1,7 @@
 //NAME: Yuhao and a Parenthesis
 //O(N)
 
-//OBS: In this exercise, consider that the first of the sequence of pairs can come after the second in the entry
+//OBS: In this exercise, consider that the first of the sequence of pairs can come after the second in the input
 #include <bits/stdc++.h>
 
 using namespace std;
