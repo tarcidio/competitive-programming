@@ -1,3 +1,5 @@
+//Problem: given a value and a coins type set, what de minimum number coins?
+
 #include <bits/stdc++.h>
 
 using namespace std;
