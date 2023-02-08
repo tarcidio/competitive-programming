@@ -3,9 +3,9 @@
 using namespace std;
 
 //Max number of coins type
-const int NMAX = 1e2 + 10;
+const int NMAX = 1e2 + 10;//more than that is beyond capacity of matrices
 //Max number of value
-const int VMAX = 1e2 + 10;
+const int VMAX = 1e2 + 10;//more than that is beyond capacity of matrices
 //Define infinite
 const long long INF = 1e17;
 //Coin array: stores the value of coin

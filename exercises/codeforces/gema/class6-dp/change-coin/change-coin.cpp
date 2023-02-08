@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const int NMAX = 1e2 + 10;
+const int NMAX = 1e2 + 10;//more than that is beyond capacity of matrices
 const long long INF = 1e17;
 int coin[NMAX];
 int num_coin;

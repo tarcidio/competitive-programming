@@ -7,7 +7,7 @@ using namespace std;
 
 typedef long long ll;
 
-const int MAXN = 1e2 + 10;
+const int MAXN = 1e2 + 10;//more than that is beyond capacity of matrices
 string s1, s2;
 int memo[MAXN][MAXN];
 
