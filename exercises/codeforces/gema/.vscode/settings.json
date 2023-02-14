@@ -8,6 +8,8 @@
         "ratio": "cpp",
         "system_error": "cpp",
         "type_traits": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "tuple": "cpp",
+        "ostream": "cpp"
     }
 }
