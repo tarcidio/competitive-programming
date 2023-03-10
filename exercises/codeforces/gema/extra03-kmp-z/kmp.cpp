@@ -4,17 +4,17 @@ using namespace std;
 
 const int MAX = 1e3 + 1;
 
-//on
-
 //s = p + t, where p is the pattern and t the text
-//s_i = s[i] + s[i+1] + ... + s[s.size] (ex: s = s_0)
-//z[i]: commum prefix length between s and s_i
+//s_i = s[i] + s[i - 1] + ... + s[0] (ex: s = s_{s.size()})
+//kmp[i]: commum sufix length between s and s_i
 int kmp[MAX];
 
+//O(N)
 void kmp_function(string s){
     kmp[0] = 0;
     for(int i = 1; i < s.size(); ++i){
         int j = kmp[i - 1];
+        //The jumps
         while(j != 0 && s[i] != s[j])
             j = kmp[j - 1];
         kmp[i] = s[i] == s[j] ? j + 1 : 0;
@@ -33,11 +33,7 @@ int main (){
 }
 
 //abacababa
-
-/*
-abaabacababa
-*/
-
+//abaabacababa
 //abcdabcdabaaabcda
 
 //Explaning the algorithm through a history
