@@ -31,6 +31,13 @@ int main(){
             cin >> priority;
             pq.push(make_pair(priority, j));
         }
+
+        while(!pq.empty()){
+            cout << "(" << pq.top().first << "," << pq.top().second << ")"<< endl;
+            pq.pop();
+        }
+
+        /*
         
         //Discovery the order of job will execute
         pair<int, int> job;
@@ -44,7 +51,15 @@ int main(){
                 break;
             }
         }
+
+        */
     }
 
     return 0;
 }
+
+/*
+1
+56 32
+6 2 1 4 6 4 2 2 5 4 1 4 9 6 3 8 2 2 4 1 5 7 5 6 7 9 3 2 5 6 7 5 2 3 8 8 2 2 9 1 7 3 4 1 5 8 6 8 6 8 9 3 7 5 5 8
+*/
