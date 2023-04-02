@@ -32,10 +32,6 @@ int main() {
   int K;
   cin >> K;
 
-  bool flag = false;
-  if (K > 20)
-    flag = true;
-
   while (K--) {
     auto reg = pq.top();
     pq.pop();
@@ -43,9 +39,6 @@ int main() {
     cout << get<0>(reg) << endl;
     pq.push(reg);
   }
-
-  if (flag)
-    cout << endl;
 
   return 0;
 }
