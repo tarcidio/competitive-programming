@@ -16,6 +16,7 @@ vector<pair<int,int>> edges[MAXN];
 //Calculate the shortest distance between ORIgin and DESTiny
 int dijkstra(int num, int ori, int dest){
     //Set the array distance with infinity
+    //It's needed start to 1 because the first node is 1
     for(int i = 1; i <= num; i++)
         dist[i] = INF;
     
