@@ -28,7 +28,8 @@ struct union_find{
     void unite(int nd1, int nd2){
         int p_nd1 = find(nd1);
         int p_nd2 = find(nd2);
-
+        
+        //Ensures more efficiency
         if(sz[p_nd2] > sz[p_nd1])
             swap(p_nd1, p_nd2);
 
