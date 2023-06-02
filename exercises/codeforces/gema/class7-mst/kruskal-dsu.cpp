@@ -19,21 +19,22 @@ struct union_find{
     }
 
     //Find the component parent
+    //Condition to be parent: par[node] == node
     int find(int node){
         return par[node] == node ? node : par[node] = find(par[node]);
     }
 
     //Join the components
     void unite(int nd1, int nd2){
-        nd1 = find(nd1);
-        nd2 = find(nd2);
+        p_nd1 = find(nd1);
+        p_nd2 = find(nd2);
 
-        if(sz[nd2] > sz[nd1])
-            swap(nd1, nd2);
+        if(sz[p_nd2] > sz[p_nd1])
+            swap(p_nd1, p_nd2);
 
         //if(nd1 != nd2){//The check will be happens in kruskal function
-        par[nd2] = nd1;
-        sz[nd1] += sz[nd2];
+        par[p_nd2] = p_nd1;
+        sz[p_nd1] += sz[p_nd2];
         //}
     }
 };
