@@ -2,6 +2,10 @@
 
 using namespace std;
 
+//A⊕0=A
+//A⊕A=0
+//A⊕B=B⊕A
+
 int main() {
   int t;
   cin >> t;
