@@ -1,3 +1,3 @@
 # competitive-programming
 
-Todos os exercícios que já resolvi voltado para programação competitiva
+All the exercises I have already solved aimed at competitive programming
