@@ -1,5 +1,7 @@
 //Link: https://leetcode.com/problems/contains-duplicate/description/
 
+// Time: O(N)
+// Space: O(N)
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
