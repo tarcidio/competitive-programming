@@ -9,3 +9,8 @@ Arrays:
 String:
 
 - lower ou upper case
+
+
+General:
+
+- guarantee one only and unique answer?
