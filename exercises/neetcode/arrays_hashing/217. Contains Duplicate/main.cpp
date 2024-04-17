@@ -2,6 +2,11 @@
 
 // Time: O(N)
 // Space: O(N)
+
+// Initial questions
+// Two Examples (true and false)
+// Size of nums
+// Range of num[i] value
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
