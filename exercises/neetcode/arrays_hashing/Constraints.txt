@@ -1,0 +1,11 @@
+Number:
+
+- range of value
+
+Arrays:
+
+- length of array (include string)
+
+String:
+
+- lower ou upper case
