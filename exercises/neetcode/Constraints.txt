@@ -14,3 +14,4 @@ String:
 General:
 
 - guarantee one only and unique answer?
+- values is unique?
