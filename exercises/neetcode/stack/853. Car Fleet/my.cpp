@@ -1,4 +1,5 @@
 // Time: O(N)
+// Space: O(N)
 class Solution {
 public:
     int carFleet(int target, vector<int>& position, vector<int>& speed) {
@@ -16,7 +17,7 @@ public:
         
         int i = 0, j = 1, ans = 1;
 
-        while(j < time.size()){
+        while(j < n){
             float tcar1 = time[i];
             float tcar2 = time[j];
             if( !(tcar2 <= tcar1) ){
