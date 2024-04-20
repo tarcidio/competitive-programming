@@ -5,7 +5,7 @@ public:
         int l = 0;
         int mid;
 
-        while(l < r){
+        while(l <= r){
             mid = (l+r)/2;
             if(nums[mid] == target)
                 return mid;
