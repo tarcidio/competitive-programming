@@ -1,3 +1,4 @@
+// Time: O(n!)
 class Solution {
     void makePermutation(int start, vector<int>& nums, vector<vector<int>>& ans){
         if(start >= nums.size()){
