@@ -1,3 +1,7 @@
+// Times: O(n*2^n)
+    // 2^n: numero de subconjuntos
+    // n: para cada subconjunto, custo de copiar para vetor resposta
+// Space: O(2^n)
 class Solution {
 private:
     void dfs(int i, vector<int> &nums, vector<int> &temp, vector<vector<int>> &ans){
